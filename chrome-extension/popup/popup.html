@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeetAI Asistanı</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <div class="logo">
+                <span class="logo-icon">🤖</span>
+                <h1 class="logo-text">MeetAI</h1>
+            </div>
+            <div class="status-badge" id="statusBadge">
+                <span class="status-dot"></span>
+                <span class="status-text" id="statusText">Hazır</span>
+            </div>
+        </div>
+
+        <!-- Controls Section -->
+        <div class="controls-section">
+            <div class="main-controls">
+                <button id="startBtn" class="btn btn-start">
+                    <span class="btn-icon">▶️</span>
+                    <span class="btn-text">Başlat</span>
+                </button>
+                <button id="stopBtn" class="btn btn-stop" disabled>
+                    <span class="btn-icon">⏹️</span>
+                    <span class="btn-text">Durdur</span>
+                </button>
+            </div>
+            
+            <!-- Recording Indicator -->
+            <div id="recordingIndicator" class="recording-indicator hidden">
+                <div class="pulse-dot"></div>
+                <span>Kayıt ediliyor...</span>
+            </div>
+        </div>
+
+        <!-- Transcript Section -->
+        <div class="content-section">
+            <div class="section-header">
+                <h3>📝 Canlı Transkripsiyon</h3>
+                <div class="confidence-indicator" id="confidenceIndicator">
+                    <span class="confidence-text">Güven: --%</span>
+                </div>
+            </div>
+            <div class="transcript-container">
+                <div id="transcriptBox" class="transcript-box">
+                    <div class="placeholder-text">
+                        Toplantıyı başlatmak için yukarıdaki "Başlat" düğmesine tıklayın...
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Summary Section -->
+        <div class="content-section">
+            <div class="section-header">
+                <h3>📋 Akıllı Özet</h3>
+                <div class="update-timer" id="updateTimer">
+                    <span>Son güncelleme: --</span>
+                </div>
+            </div>
+            <div class="summary-container">
+                <div id="summaryBox" class="summary-box">
+                    <div class="placeholder-text">
+                        Özet toplantı başladıktan sonra otomatik olarak oluşturulacak...
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="quick-actions">
+            <button id="exportBtn" class="quick-btn" disabled>
+                <span>📄</span>
+                <span>Dışa Aktar</span>
+            </button>
+            <button id="settingsBtn" class="quick-btn">
+                <span>⚙️</span>
+                <span>Ayarlar</span>
+            </button>
+            <button id="qaBtn" class="quick-btn" disabled>
+                <span>❓</span>
+                <span>Soru-Cevap</span>
+            </button>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="connection-status" id="connectionStatus">
+                <span class="connection-dot offline"></span>
+                <span class="connection-text">Backend'e bağlanıyor...</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay hidden">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">İşleniyor...</div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html> 

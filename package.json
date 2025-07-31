@@ -1,0 +1,35 @@
+{
+  "name": "meetai",
+  "version": "1.0.0",
+  "description": "MeetAI - Yapay Zeka Destekli Toplantı Asistanı",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "ai-services"
+  ],
+  "scripts": {
+    "start": "cd backend && npm start",
+    "dev": "cd backend && npm run dev",
+    "install:all": "cd backend && npm install && cd ../ai-services && npm install",
+    "test": "node tests/api-test.js"
+  },
+  "keywords": [
+    "meetai",
+    "ai",
+    "chrome-extension",
+    "transcription",
+    "speech-to-text",
+    "meeting-assistant"
+  ],
+  "author": "MeetAI Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/meetai.git"
+  },
+  "devDependencies": {}
+}

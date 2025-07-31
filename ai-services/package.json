@@ -1,0 +1,25 @@
+{
+  "name": "meetai-ai-services",
+  "version": "1.0.0",
+  "description": "MeetAI AI Services - QA Bot ve diğer AI servisleri",
+  "main": "qa-bot/qaBot.js",
+  "scripts": {
+    "start": "node qa-bot/qaBot.js"
+  },
+  "keywords": [
+    "meetai",
+    "ai",
+    "qa-bot",
+    "openai",
+    "chatbot"
+  ],
+  "author": "MeetAI Team",
+  "license": "MIT",
+  "dependencies": {
+    "openai": "^4.28.4"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

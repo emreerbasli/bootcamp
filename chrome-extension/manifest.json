@@ -1,0 +1,49 @@
+{
+  "manifest_version": 3,
+  "name": "MeetAI - Yapay Zeka Destekli Toplantı Asistanı",
+  "version": "1.0.0",
+  "description": "Gerçek zamanlı transkripsiyon, akıllı özetleme ve soru-cevap botu ile toplantılarınızı verimli hale getirin.",
+  
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs",
+    "scripting"
+  ],
+  
+  "host_permissions": [
+    "https://meet.google.com/*",
+    "https://zoom.us/*", 
+    "https://*.teams.microsoft.com/*",
+    "http://localhost:3000/*",
+    "https://localhost:3000/*"
+  ],
+  
+  "background": {
+    "service_worker": "background/background.js"
+  },
+  
+  "content_scripts": [
+    {
+      "matches": [
+        "*://meet.google.com/*",
+        "*://zoom.us/*", 
+        "*://*.teams.microsoft.com/*"
+      ],
+      "js": ["content/content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "MeetAI Asistanı"
+  },
+  
+  "web_accessible_resources": [
+    {
+      "resources": ["popup/*", "content/*"],
+      "matches": ["*://meet.google.com/*", "*://zoom.us/*", "*://*.teams.microsoft.com/*"]
+    }
+  ]
+} 
