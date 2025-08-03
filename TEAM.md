@@ -20,6 +20,7 @@
   - Veri Düzenleme
 
 ### Developer
+**Emre Erbaşlı**
 **Tuğberk Şentepe**
 - Sorumlulukları:
   - Sprint hedeflerini gerçekleştirme
