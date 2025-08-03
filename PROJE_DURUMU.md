@@ -41,16 +41,3 @@ npm start
 ✅ **Özetleme** - Akıllı simülasyon  
 ✅ **QA Bot** - Soru-cevap  
 ✅ **Export** - JSON/TXT  
-
-## 🔧 Temizlenen Gereksizlikler
-
-❌ SVG ikonlar silindi  
-❌ Gereksiz test paketleri kaldırıldı  
-❌ Kullanılmayan dependency'ler temizlendi  
-❌ Karmaşık test script'leri basitleştirildi  
-
-## 🎉 Demo Ready!
-
-Proje tamamen hazır ve çalışır durumda. API key gerekmez, mock mode yeterli.
-
-**Başlatmak için:** `npm start`
